@@ -1,0 +1,420 @@
+/* body {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+ul li {
+  float: left;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: #111111;
+}
+.button{
+    display: inline-block;
+    padding: 10px 10px;
+    vertical-align: middle;
+    background-color: #e72a90;
+    border: 0.1px solid #e72a90;
+    border-radius: 30px;
+}
+.box{
+    margin: 1rem;
+
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.card{
+    display: inline-block;
+    margin-right: 0.7%;
+    margin-left: 0.7%;
+    width: 30%;
+    border: 1px solid black;
+    padding: 10px;
+} */
+
+
+
+
+/* --- Color Variables --- */
+:root {
+    --primary-pink: #e72a90;
+    --dark-purple: #3c276c;
+    --light-purple: #9a459a;
+    --white: #ffffff;
+}
+
+/* --- Reset & Typography --- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light-purple);
+    color: var(--white);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* --- Layout Utilities --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* --- Header & Navigation --- */
+header {
+    background-color: var(--dark-purple);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.logo img {
+    width: 45px;
+    height: auto;
+    display: block;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: var(--primary-pink);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* --- main-content Section --- */
+.main-content {
+    background-color: var(--dark-purple);
+    padding: 60px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 5px solid var(--primary-pink);
+}
+
+.main-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--white);
+}
+
+.main-content p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin-bottom: 30px;
+    color: #ddd;
+}
+
+.main-content img {
+    max-width: 100%;
+    margin-top: 40px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    border: 2px solid var(--primary-pink);
+}
+
+/* --- Buttons --- */
+.buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-first {
+    background-color: var(--primary-pink);
+    color: var(--white);
+    border: 2px solid var(--primary-pink);
+}
+
+.btn-first:hover {
+    background-color: var(--white);
+    color: var(--primary-pink);
+}
+
+.btn-second {
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.btn-second:hover {
+    background-color: var(--white);
+    color: var(--dark-purple);
+}
+
+/* --- Sections (Intro, CTA) --- */
+.intro, .Final-thoughts {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.intro h2, .Final-thoughts h2 {
+    color: var(--primary-pink);
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+/* --- Cards (Product Suite) --- */
+.products {
+    padding: 60px 0;
+    background-color: var(--dark-purple);
+}
+
+.card-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: var(--light-purple);
+    border: 1px solid var(--primary-pink);
+    padding: 25px;
+    border-radius: 10px;
+    flex: 1 1 300px; /* Flex basis: min 300px, grow, shrink */
+    max-width: 350px;
+    text-align: center;
+    transition: transform 0.2s;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background-color: #a95ba9;
+}
+
+.card h3 {
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #f0f0f0;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    text-align: left;
+}
+
+.card p.description {
+    flex-grow: 1;
+    min-height: 300px; 
+    margin-bottom: 15px;
+}
+
+.card h4, .card ul {
+    margin-top: 0;
+    text-align: left;
+}
+
+.card h3, .card h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.card .h1{
+    min-height: 3em;
+    margin-bottom: 10px;
+}
+
+.card .h2{
+    min-height: 1.5em;
+    margin-top: 0;
+    margin-bottom: 0px; 
+}
+
+.card a.btn {
+    margin-top: auto; 
+    align-self: center; 
+    box-sizing: border-box; 
+    text-align: center;
+}
+
+.card ul{
+    text-align: left;
+    padding-left: 15px;
+    margin: 0;
+}
+
+.btn-link {
+    color: var(--primary-pink);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.btn-link:hover {
+    color: var(--white);
+}
+
+.features{
+    padding: 60px 0;
+    background-color: var(--dark-purple);
+}
+
+.pricing{
+    padding: 60px 0;
+    background-color: var(--dark-purple);
+}
+
+.team{
+    padding: 60px 0;
+    background-color: var(--dark-purple);
+}
+
+.description{
+    color: #f0f0f0;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.values {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.values h2{
+    color: var(--primary-pink);
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.values ol{
+    text-align: left; margin-bottom: 0;
+}
+
+.values p{
+    margin: 0; margin-left: 5px;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #1a0f30; /* Very dark purple for contrast */
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+    border-top: 3px solid var(--primary-pink);
+}
+
+/* --- Responsiveness (Mobile & Tablet) --- */
+
+/* Mobile (max 768px) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 5px;
+    }
+    
+    nav ul li a {
+        display: block;
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .card {
+        flex: 1 1 100%; /* Full width on mobile */
+        max-width: 100%;
+    }
+}
+
+/* Small Mobile (approx 360px) adjustments if needed */
+@media (max-width: 400px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+    
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+}
